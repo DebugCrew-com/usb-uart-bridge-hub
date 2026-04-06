@@ -14,6 +14,11 @@
 		compatible = "zephyr,uart-bridge";
 		peers = <&cdc_acm_uart1 &usart2>;
 	};
+
+	uart-bridge2 {
+		compatible = "zephyr,uart-bridge";
+		peers = <&cdc_acm_uart2 &uart4>;
+	};
 };
 
 
@@ -25,5 +30,9 @@
 	cdc_acm_uart1: cdc_acm_uart1 {
 		compatible = "zephyr,cdc-acm-uart";
 		label = "Zephyr USB CDC-ACM uart1";
+	};
+	cdc_acm_uart2: cdc_acm_uart2 {
+		compatible = "zephyr,cdc-acm-uart";
+		label = "Zephyr USB CDC-ACM uart2";
 	};
 };
