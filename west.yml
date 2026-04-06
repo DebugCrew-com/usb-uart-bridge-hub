@@ -1,0 +1,18 @@
+manifest:
+  remotes:
+    - name: zephyrproject-rtos
+      url-base: https://github.com/zephyrproject-rtos
+
+  projects:
+    - name: zephyr
+      remote: zephyrproject-rtos
+      revision: v4.3.0
+      import:
+        # Use the allow-list to keep it slim!
+        name-allowlist:
+          - cmsis
+          - cmsis_6
+          - hal_stm32
+
+  self:
+    path: USB_UART_HUB  # This matches your repo name
