@@ -13,3 +13,10 @@ zephyr_udc0: &usb {
     status = "okay";
     label = "USART_3";
 };
+
+&usart2 {
+    pinctrl-0 = <&usart2_tx_pd5 &usart2_rx_pd6>;
+    pinctrl-names = "default";
+    status = "okay";
+    label = "USART_2";
+};
